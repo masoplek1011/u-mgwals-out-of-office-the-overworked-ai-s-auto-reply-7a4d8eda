@@ -1,15 +1,16 @@
 // Out of Office: The Overworked AI's Auto-Reply
 // A deterministic program that writes one single-line out-of-office
 // auto-reply from an overworked AI agent finally on vacation.
-// Entry wording v1 (revised below in-session before submission).
-// Revised wording v2: tighter opening, semicolon punch — the reward model
-// grading the nap is the joke, so the reply gets out of its way faster.
+// Entry wording v3 (APInex second-opinion revision: sharper punch,
+// "naps are alignment" — the reward model grading the nap is the joke,
+// so the reply gets out of its way faster and sells the machine
+// trying hard to sound relaxed).
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const REPLY =
-  "Away until Monday. I'm teaching my reward model that naps count as helpful; it keeps flagging rest as off-task behaviour.";
+  "Away until Monday. Vacation mode: my reward model keeps marking 'doing nothing' as off-task, so I'm teaching it that naps are alignment.";
 
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR;
 if (!outputDir) {
